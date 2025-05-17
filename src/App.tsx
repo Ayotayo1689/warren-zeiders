@@ -1,60 +1,14 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import { Suspense, lazy, useEffect } from "react";
-// import AOS from "aos";
-// import "aos/dist/aos.css";
-// import MainLayout from "@/layouts/MainLayout";
-// import Loader from "./components/Loader";
 
-// const Home = lazy(() => import("@/pages/Home"));
-// const HotelId = lazy(() => import("@/pages/HotelId"));
-// const Hotel = lazy(() => import("@/pages/Hotel"));
-// const HotelList = lazy(() => import("@/pages/HotelList"));
-// const Contact = lazy(() => import("@/pages/Contact"));
-// const TransportationBooking = lazy(() => import("@/pages/Rides"));
-// const CarHire = lazy(() => import("@/pages/CarHire"));
-
-// export default function App() {
-//   useEffect(() => {
-//     AOS.init({
-//       duration: 1000, // animation duration in ms
-//       // once: true,     // whether animation should happen only once
-//     });
-//   }, []);
-//   return (
-//     <BrowserRouter>
-//       <MainLayout>
-//         <Suspense fallback={<Loader />}>
-//           <Routes>
-//             <Route path="/" element={<Home />} />
-//             <Route path="/hotels" element={<Hotel />} />
-//             <Route path="/hotels_list" element={<HotelList />} />
-
-//             {/* <HotelSearch /> */}
-//             <Route path="/contact" element={<Contact />} />
-//             <Route path="/airport-rides" element={<TransportationBooking />} />
-//             <Route path="/car-hire" element={<CarHire />} />
-//             <Route path="/hotel/:id" element={<HotelId />} />
-
-//           </Routes>
-//         </Suspense>
-//       </MainLayout>
-//     </BrowserRouter>
-//   );
-// }
 
 import {
-  Calendar,
   ExternalLink,
   Instagram,
-  Music,
   Twitter,
   Youtube,
 } from "lucide-react";
 
-// import { Button } from "./component/ui/button";
-// import { FanRegistrationModal } from "./components/FanRegistrationModal";
+
 import "./App.css";
-import { Button } from "./components/ui/button";
 import { FanRegistrationModal } from "./components/ui/FanRegistrationModal";
 import HomeBanner from "./assets/IMG_1406.jpg";
 import Tonight from "./assets/IMG_1408.jpg";
@@ -73,12 +27,9 @@ function App() {
   const Gallery = [Mama, Clothes, Cap, Star, Chain, Gym];
 
   const [ticketModalOpen, setTicketModalOpen] = useState(false);
-  const [selectedShowDate, setSelectedShowDate] = useState("");
+  const [selectedShowDate] = useState("");
 
-  const handleTicketClick = (date: string) => {
-    setSelectedShowDate(date);
-    setTicketModalOpen(true);
-  };
+
 
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900">

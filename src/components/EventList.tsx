@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Calendar, MapPin, Clock, Ticket, FireExtinguisher, Flame, FlameIcon, SparkleIcon } from "lucide-react"
+import { Calendar, MapPin, Clock, Ticket, Flame } from "lucide-react"
 import { Button } from "./ui/button"
 import { TicketSoldOutModal } from "./TicketSoldoutModal"
 
